@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navegadores */
+
+.navVertical {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #cbcbcb;
+}
+
+.navVertical .principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2px;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 5px;
+}
+
+.principal h2 {
+    font-size: 22px;
+    color: #000000;
+}
+
+.principal .logoSena {
+    width: 65px;
+}
+
+.principal:hover {
+    transform: scale(1.01);
+}
+
+.listMaquinas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.tipoMaquinaN {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.tipoMaquinaN:hover {
+    background-color: #30944B;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.maquinaN {
+    padding: 10px 15px 10px 25px;
+}
+
+.maquinaN:hover {
+    background-color: #30944B;
+    color: #fff;
+}
+
+.adminMaquina {
+    padding-top: 1rem;
+    border-top: 1px solid #cbcbcb;
+}
+
+.herramientaMaquinaN {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+}
+
+.herramientaMaquinaN:hover {
+    background-color: #30944B;
+    color: #fff;
+}
+
+.containerSectionN {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.atrasN{
+    border-top: 1px solid #cbcbcb;
+}
+
+/* scroll */
+
+.listMaquinas::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.listMaquinas::-webkit-scrollbar-thumb {
+    background: #e7e7e7;
+    border-radius: 4px;
+}
+
+.listMaquinas::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.listMaquinas::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+/* nav Usuarios, Informes, Almacen */
+
+.navList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navList li {
+    width: 100%;
+    font-size: 25px;
+    padding: 10px 15px 10px 15px;
+}
+
+.navList li:hover {
+    background-color: #30944B;
+    color: #fff;
+}
+
+/* Todos los container */
+
+.containerM {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+}
+
+.containerM .navHorizontal {
+    width: 100%;
+    height: 50px;
+    background-color: #34A853;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+
+/* Navbar Horizontal */
+
+.navHorizontal h2 {
+    color: #fff;
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.navHorizontal a:hover {
+    background-color: #30944B;
+}
+
+.navHorizontal a {
+    color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#active {
+    background-color: #30944B;
+}
+
+#activeMaquina {
+    background-color: #30944B;
+    color: #fff;
+}
+
+.activeMaquina {
+    background-color: #30944B;
+    color: #fff;
+}
+
+
+/* Responsive */
+
+.homeR {
+    display: none;
+}
+
+.menu-responsive {
+    display: none;
+}
+
+#navbar-toggle {
+    display: none;
+}
+
+.navListR {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navVertical {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #34A853;
+        z-index: 1;
+    }
+
+    .principal {
+        height: 50px;
+    }
+
+    .principal .logoSena{
+        width: 56px;
+        filter: brightness(100);
+    }
+
+    .principal h2{
+        display: none;
+    }
+
+    .containerSectionN {
+        display: none;
+    }
+
+    .containerM {
+        width: 100%;
+        margin: 50px 0 0 0;
+    }
+
+    .homeR {
+        display: block;
+        position: fixed;
+        left: 0px;
+    }
+
+    .logoSenaR {
+        width: 60px;
+        filter: brightness(100);
+    }
+
+    .menu-responsive {
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+    }
+
+    .menuR {
+        filter: invert(1);
+        width: 35px;
+    }
+
+    #navbar-toggle:checked~.containerSectionN {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #navbar-toggle:checked~ h3 {
+        flex-direction: column;
+        display: block;
+        position: fixed;
+        color: #fff;
+        background-color: #000000;
+    }
+
+    .containerM .navHorizontal {
+        width: 100%;
+        padding: 0;
+        justify-content: space-around;
+        background-color: #fff;
+        color: #000000;
+    }
+
+    .navHorizontal a {
+       background-color: #eeeeee;
+    } 
+
+    .navHorizontal h2 {
+        color: #505050;
+    }
+
+    #active {
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 1040px) {
+    .navHorizontal h2{
+        gap: 0;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+
+    .navHorizontal svg {
+        width: 1.2rem;
+    }
+}
+

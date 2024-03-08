@@ -1,0 +1,51 @@
+
+.btn-registrarMOT {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 5px auto 30px;
+}
+.containerMot {
+    width: 90%;
+    margin: 20px auto;
+}
+.containerTIOT{
+    width: 88%;
+}
+.modalIOT ::placeholder{
+    font-size: 16px;
+}
+.botton-registrar-div Button{
+    background-color: rgb(0, 173, 0);
+}
+.containerTIOT{
+    width: 88%;
+}
+.formIOT Input:focus{
+    font-size: 16px;
+}
+.btn-registrarMOT button{
+    color: white;
+    width: 15%;
+    background-color: rgb(0, 173, 0);
+}
+
+.btn-registrarMOT button:hover{ 
+    background-color: rgb(1, 133, 1)
+}
+/* .tablaOT{
+    width: 1236px;
+    position: relative;
+    right: 56px 
+} */
+
+@media (max-width: 1290px) {
+    .btn-registrarMOT button {
+        width: 30%;
+    }
+}
+@media (max-width: 1000px) {
+    .btn-registrarMOT button {
+        width: 60%;
+    }
+}

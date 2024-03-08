@@ -1,0 +1,195 @@
+.menu-principal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.containerMenu {
+    width: 70%;
+    margin: auto;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 250px;
+    grid-template-areas: 
+    "maquinasMenu informesMenu almacenMenu"
+    "usuariosMenu usuariosMenu almacenMenu";
+    gap: 10px;
+}
+
+.maquinasMenu {
+    grid-area: maquinasMenu;
+    box-shadow: 7px 3px 21px -4px rgba(0,0,0,0.75);
+    border-radius: 7px;
+    background-image: url('./Imagenes_Menu/maquinas.jpg');
+    background-size: 100%;
+}
+
+.informesMenu {
+    grid-area: informesMenu;
+    box-shadow: 7px 3px 21px -4px rgba(0,0,0,0.75);
+    border-radius: 7px;
+    background-image: url('./Imagenes_Menu/informes.jpg');
+    background-size: cover;
+}
+
+.almacenMenu {
+    grid-area: almacenMenu;
+    box-shadow: 7px 3px 21px -4px rgba(0,0,0,0.75);
+    border-radius: 7px;
+    background-image: url('./Imagenes_Menu/almacen.jpg');
+    background-size: cover;
+}
+
+.usuariosMenu {
+    grid-area: usuariosMenu;
+    box-shadow: 7px 3px 21px -4px rgba(0,0,0,0.75);
+    border-radius: 7px;
+    background-image: url('./Imagenes_Menu/aprendices.jpg');
+    background-size: 100%;
+}
+
+.a-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgSectionMenu{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.maquinasMenu:hover, .almacenMenu:hover, .informesMenu:hover, .usuariosMenu:hover{
+    filter: blur(1px)  invert(5%);
+}
+
+.imgSectionMenu:active{
+    filter: invert(10%);
+}
+
+.text-menu {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+@media (max-width: 1500px) and (min-width: 1350px){
+    .containerMenu{
+        grid-template-rows: 250px 250px;
+    }
+}
+
+
+@media (max-width: 1350px) and (min-width: 1280px){
+    .containerMenu{
+        grid-template-rows: 210px 200px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 900px){
+    .containerMenu{
+        grid-template-rows: 170px 170px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 700px){
+    .containerMenu{
+        grid-template-rows: 150px 150px;
+    }
+}
+
+@media (max-width: 700px){
+    .containerMenu{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "maquinasMenu"
+        "informesMenu"
+        "usuariosMenu"
+        "almacenMenu";
+        grid-template-rows: repeat(4, 150px);
+    }
+
+    .titulo-sena {
+        font-size: 15px;
+    }
+    .titulo-taller {
+        font-size: 14px;
+    }
+}
+
+/* @media (max-height: 667px) {
+    .menu-principal {
+        top: 200px;
+    }
+} */
+
+
+/* iconos flotantes */
+
+.IconsPrincipal {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.iconP {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconP img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.iconP img:hover {
+    transform: scale(1.05);
+}
+
+.containerUserName {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    position: absolute;
+    right: 80px;
+    top: 19px;
+}
+
+.nombreUser {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.rolUser {
+    margin-top: -5px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .containerUserName{
+        right: 70px;
+        top: 25px;
+    }
+
+}
+
